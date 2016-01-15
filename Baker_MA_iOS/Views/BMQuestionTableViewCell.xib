@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
+            <string>Roboto-Light</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="234" id="KGk-i7-Jjw" customClass="BMQuestionTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="235"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="234.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V0W-Cs-LEl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="234"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question/Request" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gd9-kd-utg">
+                                <rect key="frame" x="35" y="14" width="269" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="xUg-dt-mLF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="18"/>
+                                <color key="textColor" red="0.63921568627450975" green="0.67843137254901964" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WjX-49-JDn">
+                                <rect key="frame" x="30" y="49" width="274" height="165"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.37254901960784315" green="0.37254901960784315" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gd9-kd-utg" firstAttribute="top" secondItem="V0W-Cs-LEl" secondAttribute="top" constant="14" id="3OZ-fi-LN6"/>
+                            <constraint firstAttribute="bottom" secondItem="WjX-49-JDn" secondAttribute="bottom" constant="20" id="Sul-1b-akB"/>
+                            <constraint firstAttribute="trailing" secondItem="gd9-kd-utg" secondAttribute="trailing" constant="16" id="Zjv-Ib-ZCf"/>
+                            <constraint firstAttribute="trailing" secondItem="WjX-49-JDn" secondAttribute="trailing" constant="16" id="h7z-bp-RlZ"/>
+                            <constraint firstItem="WjX-49-JDn" firstAttribute="leading" secondItem="V0W-Cs-LEl" secondAttribute="leading" constant="30" id="ou8-Rx-zgz"/>
+                            <constraint firstItem="WjX-49-JDn" firstAttribute="top" secondItem="V0W-Cs-LEl" secondAttribute="top" constant="49" id="tde-Q8-OlQ"/>
+                            <constraint firstItem="gd9-kd-utg" firstAttribute="leading" secondItem="V0W-Cs-LEl" secondAttribute="leading" constant="35" id="w4Q-7h-VJG"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="V0W-Cs-LEl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0ae-eu-jDh"/>
+                    <constraint firstAttribute="trailing" secondItem="V0W-Cs-LEl" secondAttribute="trailing" id="gO4-fa-D22"/>
+                    <constraint firstAttribute="bottom" secondItem="V0W-Cs-LEl" secondAttribute="bottom" id="q3R-8B-2GD"/>
+                    <constraint firstItem="V0W-Cs-LEl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="vB6-me-Chr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="textView" destination="WjX-49-JDn" id="MPD-6H-EuV"/>
+            </connections>
+            <point key="canvasLocation" x="224" y="483"/>
+        </tableViewCell>
+    </objects>
+</document>

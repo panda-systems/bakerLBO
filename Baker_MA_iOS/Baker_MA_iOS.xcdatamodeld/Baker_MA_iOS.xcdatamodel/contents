@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="BMContact" representedClassName="BMContact" syncable="YES">
+        <attribute name="avatar" optional="YES" attributeType="String" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="contactId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="BMCountry" representedClassName="BMCountry" syncable="YES">
+        <attribute name="countryId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="contacts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BMContact" syncable="YES"/>
+        <relationship name="topics" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BMTopic" syncable="YES"/>
+    </entity>
+    <entity name="BMInitData" representedClassName="BMInitData" syncable="YES">
+        <attribute name="databaseId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="dataChanged" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastUpdate" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="countries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BMCountry" syncable="YES"/>
+        <relationship name="settings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BMSettings" syncable="YES"/>
+    </entity>
+    <entity name="BMSettings" representedClassName="BMSettings" syncable="YES">
+        <attribute name="css" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="introduction" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="settingsId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="BMSubject" representedClassName="BMSubject" syncable="YES">
+        <attribute name="htmlData" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subjectId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="BMSubTopic" representedClassName="BMSubTopic" syncable="YES">
+        <attribute name="htmlData" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subTopicId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="subjects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BMSubject" syncable="YES"/>
+    </entity>
+    <entity name="BMTopic" representedClassName="BMTopic" syncable="YES">
+        <attribute name="htmlData" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="topicId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="subtopics" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BMSubTopic" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BMContact" positionX="-1836" positionY="-2329" width="128" height="148"/>
+        <element name="BMCountry" positionX="-1926" positionY="-2493" width="128" height="118"/>
+        <element name="BMInitData" positionX="-1919" positionY="-2691" width="128" height="150"/>
+        <element name="BMSettings" positionX="-2144" positionY="-2538" width="128" height="133"/>
+        <element name="BMSubject" positionX="-2025" positionY="-2014" width="128" height="103"/>
+        <element name="BMSubTopic" positionX="-2025" positionY="-2158" width="128" height="118"/>
+        <element name="BMTopic" positionX="-2025" positionY="-2322" width="128" height="118"/>
+    </elements>
+</model>
